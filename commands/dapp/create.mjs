@@ -6,13 +6,11 @@ import { console } from 'console';
 export const dappCreateCommand = new Command('create')
   .description('Creates a new dapp')
   .action(async () => {
-    const blockchainRid = Buffer.from("DEADBEEF", "hex");
+    const blockchainRid = Buffer.from('DEADBEEF', 'hex');
     try {
       await sendTx({
         name: 'sealed.create_dapp',
-        args: [
-          blockchainRid
-        ]
+        args: [blockchainRid],
       });
     } catch (error) {
       console.error(`Error: ${error.message}`);

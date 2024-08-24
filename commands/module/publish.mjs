@@ -25,7 +25,9 @@ export const modulePublishCommand = new Command('publish')
       }
 
       // Extract entries from XML files
-      const xmlFiles = fs.readdirSync('build').filter(file => file.endsWith('.xml'));
+      const xmlFiles = fs
+        .readdirSync('build')
+        .filter((file) => file.endsWith('.xml'));
       const entries = [];
 
       const modulePath = `lib/${library}`;
@@ -40,18 +42,17 @@ export const modulePublishCommand = new Command('publish')
       }
 
       // Concatenate XML entries into a single string
-      const xmlEntriesString = entries.map(entry => {
-        return `<entry key="${entry.key}">\n<string>${entry.value}</string>\n</entry>`;
-      }).join('\n');
+      const xmlEntriesString = entries
+        .map((entry) => {
+          return `<entry key="${entry.key}">\n<string>${entry.value}</string>\n</entry>`;
+        })
+        .join('\n');
 
       const moduleConfig = `<dict>\n${xmlEntriesString}\n</dict>`;
 
       await sendTx({
         name: 'sealed.upload_module',
-        args: [
-          library,
-          moduleConfig
-        ]
+        args: [library, moduleConfig],
       });
     } catch (error) {
       console.error(`Error: ${error.message}`);
