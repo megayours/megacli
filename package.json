@@ -1,0 +1,33 @@
+{
+  "name": "megacli",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "format": "prettier . --write",
+    "lint": "eslint"
+  },
+  "bin": {
+    "megacli": "./index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "execa": "^9.3.0",
+    "postchain-client": "^1.17.0",
+    "xml2js": "^0.6.2",
+    "yaml": "^2.5.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "eslint": "^9.9.1",
+    "husky": "^9.1.5",
+    "prettier": "^3.3.3"
+  }
+}
