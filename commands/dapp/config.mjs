@@ -1,7 +1,7 @@
+/* global buffer, console, process */
+
 import { Command } from 'commander';
 import { query } from '../../utils/chromia.mjs';
-import { Buffer } from 'buffer';
-import { console } from 'console';
 
 export const dappConfigCommand = new Command('config')
   .argument('<hash>', 'Hash of the dapp')

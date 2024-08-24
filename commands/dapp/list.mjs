@@ -1,6 +1,7 @@
+/* global buffer, console, process */
+
 import { Command } from 'commander';
 import { query } from '../../utils/chromia.mjs';
-import { console } from 'console';
 
 export const dappListCommand = new Command('list')
   .description('Lists all dapps')

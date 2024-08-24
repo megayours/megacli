@@ -1,3 +1,5 @@
+/* global buffer, console, process */
+
 import { Command } from 'commander';
 import fs from 'fs';
 import path from 'path';
@@ -5,8 +7,6 @@ import YAML from 'yaml';
 import { execa } from 'execa';
 import { findEntryContent } from '../../utils/xmlUtils.mjs';
 import { sendTx } from '../../utils/chromia.mjs';
-import { console } from 'console';
-import { process } from 'process';
 
 export const modulePublishCommand = new Command('publish')
   .argument('<library>', 'Library to publish')

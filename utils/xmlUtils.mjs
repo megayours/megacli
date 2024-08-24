@@ -1,4 +1,4 @@
-import { console } from 'console';
+/* global buffer, console, process */
 
 export function findEntryContent(xmlContent, mPath) {
   const xmlDict = parseXml(xmlContent);

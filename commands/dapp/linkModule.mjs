@@ -1,7 +1,7 @@
+/* global buffer, console, process */
+
 import { Command } from 'commander';
 import { sendTx } from '../../utils/chromia.mjs';
-import { Buffer } from 'buffer';
-import { console } from 'console';
 
 export const dappLinkModuleCommand = new Command('link-module')
   .argument('<module>', 'Module Path to Link')

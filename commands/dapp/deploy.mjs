@@ -1,11 +1,11 @@
+/* global buffer, console, process */
+
 import { Command } from 'commander';
 import fs from 'fs';
 import YAML from 'yaml';
 import { execa } from 'execa';
 import { sendTx } from '../../utils/chromia.mjs';
 import path from 'path';
-import { Buffer } from 'buffer';
-import { console } from 'console';
 
 export const dappPublishCommand = new Command('deploy')
   .argument('<blockchain>', 'Blockchain to publish')

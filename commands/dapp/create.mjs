@@ -1,7 +1,6 @@
+/* global buffer, console, process */
 import { Command } from 'commander';
 import { sendTx } from '../../utils/chromia.mjs';
-import { Buffer } from 'buffer';
-import { console } from 'console';
 
 export const dappCreateCommand = new Command('create')
   .description('Creates a new dapp')
