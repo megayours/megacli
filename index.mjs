@@ -3,7 +3,6 @@
 import { Command } from 'commander';
 import { dappCommand } from './commands/dapp/index.mjs';
 import { moduleCommand } from './commands/module/index.mjs';
-import { process } from 'process';
 
 const program = new Command();
 
